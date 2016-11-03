@@ -1,0 +1,89 @@
+
+6073746323
+入库订单接口 WMS_ORDER_IN
+出库订单接口 WMS_ORDER_OUT
+调拨订单接口 WMS_ORDER_ALLOCATE
+订单取消接口 WMS_ORDER_CANCEL
+定单退回接口 WMS_ORDER_RETURN
+
+
+崔大发:
+620160315
+崔大发:  wwwww
+620160317
+
+
+
+
+http://10.230.13.175:8480/admin-web
+20160425101452577
+崔家腾	88-51-FB-6A-9B-8E	58.40.17.67:10073	10.224.72.125
+175是项目测试的itf，176是项目测试的job；166是日常测试的itf，167是日常测试的job；187是开发环境的itf，189是开发环境的job
+http://sonar.deppon.com/dashboard?id=com.deppon%3Adop%3Adop-dev&did=1
+
+#反向查询
+queryAppkey=jGHJ912hsa1S
+queryEwbMsgType=TMS_WAYBILL_DETAIL_QUERY
+cnEwbQueryUrl=http://pacdaily.tbsandbox.com/gateway/pac_message_receiver.do 
+BW16061770000000072
+VL100000007987500001 
+logisticsInterface={"waybillCode":"6073746323"}&data_digest=w8ROk7V0rHOlDN%2FxBSjqsQ%3D%3D&msg_type=TMS_WAYBILL_DETAIL_QUERY&logistic_provider_id=DBKD新dop生产global配置：
+
+
+
+http://svn.deppon.com/System_new_DOP
+ 
+截取报文中logisticID :
+SELECT tt.params ,
+substr(tt.params,0, INSTR(tt.params,'\')-1) logisticID
+FROM  (SELECT 
+substr(t.request_param,INSTR(t.request_param,'logisticID')+15, LENGTH（t.request_param）) AS params 
+FROM dopuser.t_dop_orderlog_new t WHERE 1=1
+AND t.action_type='SIEVE_EWB_NEW_ORDER_SYNC'
+AND t.runtime_exception_name='java.lang.NullPointerException'
+And t.create_time>=to_date('2016-05-19 00:00:00','yyyy-mm-dd hh24:mi:ss')
+And t.create_time<=to_date('2016-05-19 23:59:59','yyyy-mm-dd hh24:mi:ss')) tt
+WHERE 1=1
+http://shipping.bwcmall.com/api/v1/shippingReceive/notice
+256164651;256164649
+codis:
+./redis-cli -p 10000 -h 127.0.0.1 -a 11111111
+周玺-OMS项目开发组 19:49 
+codis-bin
+f88ebfa78d8e2f2089bf477803d69ee9
+
+地址：192.168.5.115
+账号：  oms_global115
+密码：  t1jBbzKOWNKGIEdc
+ESB_OMS2ESB_QUERY_INVERSE_CAINIAO
+192.168.68.25  
+
+DOP日常2：
+应用服务器；192.168.10.147
+job服务器：192.168.10.148
+数据库地址：192.168.10.158
+
+DOP日常1：
+应用服务器：192.168.10.149
+job服务器：192.168.10.150
+数据库地址：192.168.10.159
+
+DOP项目环境：（对接悟空）
+应用服务器：192.168.10.151
+job服务器：192.168.10.152
+数据库地址：192.168.10.160
+
+OMS日常2：
+服务启地址：192.168.10.141\192.168.10.140
+数据库地址：192.168.10.144
+页面登陆地址：192.168.68.25 
+
+OMS日常1：
+服务器地址：192.168.10.161\192.168.10.162
+数据库地址：192.168.10.145
+页面登陆地址：192.168.68.18
+
+OMS项目环境：（对接悟空）
+服务器地址：192.168.10.163\192.168.10.166
+数据库地址：10.224.173.139
+页面登陆地址：192.168.68.19

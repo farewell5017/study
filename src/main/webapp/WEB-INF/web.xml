@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>web xml of cjt-study</display-name>
+	<context-param>
+		<param-name>devName</param-name>
+		<param-value>cuijiateng</param-value>
+	</context-param>
+	<!-- spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- spring配置文件 -->
+	<!--contextConfigLocation在 ContextLoaderListener类中的默认值是 /WEB-INF/applicationContext.xml -->
+	<!-- <context-param> -->
+	<!-- <param-name>contextConfigLocation</param-name> -->
+	<!-- <param-value>classpath:applicationContext.xml</param-value> -->
+	<!-- </context-param> -->
+	<!-- 编码过滤器 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- struts框架 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<!-- <init-param> -->
+		<!-- <param-name>configProviders</param-name> -->
+		<!-- <param-value>com.cjt.study.basic.server.struts.MyStrutsCfgProvider</param-value> -->
+		<!-- </init-param> -->
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>struts-default.xml,struts-plugin.xml,struts.xml</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>testPushServlet</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestInfoPushServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testPushServlet</servlet-name>
+		<url-pattern>/servlet/testPush</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>testReqRedirect</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestReqRedirect</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testReqRedirect</servlet-name>
+		<url-pattern>/servlet/testRedirect</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>testForward</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestForward</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testForward</servlet-name>
+		<url-pattern>/servlet/testForward</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>loadProperties</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestLoadProperties</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loadProperties</servlet-name>
+		<url-pattern>/servlet/loadProperties</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>servletConfig</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestServletConfig</servlet-class>
+		<init-param>
+			<param-name>姓名</param-name>
+			<param-value>汤龙萍</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>servletConfig</servlet-name>
+		<url-pattern>/servlet/servletConfig</url-pattern>
+	</servlet-mapping>
+	<!-- 图片下载 -->
+	<servlet>
+		<servlet-name>fileDownload</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestFileDownload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fileDownload</servlet-name>
+		<url-pattern>/servlet/fileDownload</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>testCookie</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testCookie</servlet-name>
+		<url-pattern>/servlet/index.action</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>registServlet</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.RegistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registServlet</servlet-name>
+		<url-pattern>/servlet/registServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>doRegist</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.DoRegistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doRegist</servlet-name>
+		<url-pattern>/servlet/doRegist</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>showPicture</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.ShowPictureServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>showPicture</servlet-name>
+		<url-pattern>/servlet/showPicture</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>downloadFile</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.DownloadFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>downloadFile</servlet-name>
+		<url-pattern>/servlet/downloadFile</url-pattern>
+	</servlet-mapping>
+	<!-- 测试eCharts -->
+	<servlet>
+		<servlet-name>testEChartsServlet</servlet-name>
+		<servlet-class>com.cjt.study.basic.server.servlet.TestECharts</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testEChartsServlet</servlet-name>
+		<url-pattern>/servlet/testEChartsServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errorPage/404Error.jsp</location>
+	</error-page>
+</web-app>
