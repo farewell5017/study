@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC 
 	"-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cjt.study.mapper.IUserMapper">
-	<select id="findUserByName" resultType="com.cjt.study.domain.UserEntity">
+<mapper namespace="com.cjt.study.netdisk.mapper.IUserMapper">
+	<select id="findUserByName" resultType="com.cjt.study.netdisk.domain.UserEntity">
  <![CDATA[ 
  SELECT
 	t.id as id, 

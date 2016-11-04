@@ -1,4 +1,4 @@
-package com.cjt.study.domain;
+package com.cjt.study.netdisk.domain;
 
 public class UserEntity {
 	private String username;

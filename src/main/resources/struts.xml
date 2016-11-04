@@ -6,25 +6,5 @@
 	<constant name="struts.action.extension" value="action"></constant>
 	<constant name="struts.objectFactory" value="spring" />
 	<!-- 引入其他模块配置! -->
-	<!-- <include file="struts-view.xml" /> -->
-	<package name="test" namespace="/test" extends="struts-default">
-		<action name="testStruts" class="com.cjt.study.basic.server.struts.TestStruts"
-			method="execute">
-			<result name="login">/login.jsp</result>
-			<result name="success" type="redirect">
-				/servlet/testForward
-			</result>
-		</action>
-		<action name="jstl" class="com.cjt.study.basic.server.struts.JSTLAction"
-			method="execute">
-			<result name="success">
-				/WEB-INF/testjsp/testJSTL.jsp
-			</result>
-		</action>
-	</package>
-	<package name="user" namespace="/user" extends="struts-default">
-		<action name="userAction" class="userAction" method="execute">
-			<result name="success">/WEB-INF/jsp/disk.jsp</result>
-		</action>
-	</package>
+	<include file="classpath:struts/basic/struts-basic.xml" />
 </struts>

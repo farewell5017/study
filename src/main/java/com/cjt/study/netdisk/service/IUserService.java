@@ -1,6 +1,6 @@
-package com.cjt.study.service;
+package com.cjt.study.netdisk.service;
 
-import com.cjt.study.domain.UserEntity;
+import com.cjt.study.netdisk.domain.UserEntity;
 
 public interface IUserService {
 	public UserEntity findUserByName(String username);

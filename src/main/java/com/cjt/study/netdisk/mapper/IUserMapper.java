@@ -1,6 +1,6 @@
-package com.cjt.study.mapper;
+package com.cjt.study.netdisk.mapper;
 
-import com.cjt.study.domain.UserEntity;
+import com.cjt.study.netdisk.domain.UserEntity;
 import com.cjt.study.utils.MybatisAnotation;
 
 /**

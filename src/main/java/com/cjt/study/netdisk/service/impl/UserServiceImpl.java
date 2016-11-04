@@ -1,10 +1,10 @@
-package com.cjt.study.service.impl;
+package com.cjt.study.netdisk.service.impl;
 
 import javax.annotation.Resource;
 
-import com.cjt.study.domain.UserEntity;
-import com.cjt.study.mapper.IUserMapper;
-import com.cjt.study.service.IUserService;
+import com.cjt.study.netdisk.domain.UserEntity;
+import com.cjt.study.netdisk.mapper.IUserMapper;
+import com.cjt.study.netdisk.service.IUserService;
 
 public class UserServiceImpl implements IUserService {
 	@Resource

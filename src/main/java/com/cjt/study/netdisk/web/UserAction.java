@@ -1,7 +1,7 @@
-package com.cjt.study.web;
+package com.cjt.study.netdisk.web;
 
-import com.cjt.study.domain.UserEntity;
-import com.cjt.study.service.IUserService;
+import com.cjt.study.netdisk.domain.UserEntity;
+import com.cjt.study.netdisk.service.IUserService;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserAction extends ActionSupport {
